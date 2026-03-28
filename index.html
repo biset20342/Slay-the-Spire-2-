@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-TW">
 <head>
 <meta charset="UTF-8">
@@ -230,6 +230,14 @@ body{background:var(--bg-deep);color:var(--text-primary);font-family:var(--font-
 
 .src{font-size:.62rem;color:var(--text-muted);margin-top:.5rem;letter-spacing:.03em}
 .footer{text-align:center;padding:3rem 1rem 1rem;font-size:.65rem;color:var(--text-muted);letter-spacing:.05em}
+
+/* CARD IMAGES IN BUILDS */
+.card-imgs{display:flex;flex-wrap:wrap;gap:6px;margin-top:.55rem;padding:.45rem 0 0;border-top:.5px solid rgba(255,255,255,.05)}
+.ci-wrap{display:flex;flex-direction:column;align-items:center;gap:2px;position:relative}
+.ci-wrap div{display:block}
+.ci-wrap img{width:68px;height:auto;border-radius:4px;border:.5px solid var(--border);transition:transform .2s,border-color .2s,box-shadow .15s;cursor:default;transform-origin:bottom center}
+.ci-wrap img:hover{transform:scale(3.5) translateY(-2px);z-index:99;position:relative;border-color:var(--char-accent);box-shadow:0 10px 25px rgba(0,0,0,.7);image-rendering:-webkit-optimize-contrast}
+.ci-lbl{font-size:.5rem;color:var(--text-muted);font-family:var(--font-mono);text-align:center;max-width:68px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 </style>
 </head>
 <body id="body">
@@ -668,7 +676,7 @@ body{background:var(--bg-deep);color:var(--text-primary);font-family:var(--font-
   <!-- SL MECH -->
   <div class="pnl active" id="sl-mech">
     <div class="sec">三大核心機制</div>
-    <div class="card"><div class="ctit"><span class="bdg bpoison">毒素 Poison</span>繞過格擋的持續傷害</div><div class="cb">毒素是疊加型 Debuff，敵人在<strong>每回合結束時受到等同於毒素層數的傷害</strong>，然後毒素-1。毒素傷害完全繞過敵人的格擋，讓靜默獵手不需要打穿防禦就能造成致命傷害。<br><br>在殺戮尖塔2中，目前沒有 Boss 擁有清除毒素的機制（復活型除外），使毒素比一代更加強力。<br><br><strong>神器（Artifact）的對策：</strong>敵人的神器�      <div class="card"><div class="cb"><div class="row"><div class="ri riacc">S</div><div class="rt"><strong>熊熊烈火（Inflame）</strong>：1費永久+2力量，早期力量的最快累積方式。</div></div><div class="row"><div class="ri riacc">S</div><div class="rt"><strong>魔王形態（Demon Form）</strong>：能力牌，每回合開始+2力量（累積型），是力量流的核心終結手段。</div></div><div class="row"><div class="ri riacc">A</div><div class="rt"><strong>突破極限（Limit Break）</strong>：升級後可反覆使用，將力量翻倍，達到恐怖數值。</div></div><div class="row"><div class="ri riacc">S</div><div class="rt"><strong>旋風斬（Whirlwind）</strong>：X費，對所有敵人多段攻擊，每段都受力量加成，是最佳 AOE 收割武器。</div></div><div class="row"><div class="ri riacc">A</div><div class="rt"><strong>雙重打擊（Twin Strike）</strong>：2費打兩下，力量提升時每顔子彈都倍增，高效多段攻擊。</div></div></div><div class="src">來源：Mobalytics · NeonLightsMedia · games.gg</div></div>��有匕首傷害，「萬刃（A Thousand Cuts）」則讓每張打出的牌都造成1點額外傷害，兩者加乘效果驚人。<br><br><strong>※殺戮尖塔2 重要變更：</strong>「刀扇（Blade Dance）」現在帶有<strong>消耗（Exhaust）</strong>效果，打出後即消耗無法洗回，需特別注意匕首的持久供應來源。</div><div class="src">來源：TheGamer · NeonLightsMedia · egamersworld</div></div>
+    <div class="card"><div class="ctit"><span class="bdg bpoison">毒素 Poison</span>繞過格擋的持續傷害</div><div class="cb">毒素是疊加型 Debuff，敵人在<strong>每回合結束時受到等同於毒素層數的傷害</strong>，然後毒素-1。毒素傷害完全繞過敵人的格擋，讓靜默獵手不需要打穿防禦就能造成致命傷害。<br><br>在殺戮尖塔2中，目前沒有 Boss 擁有清除毒素的機制（復活型除外），使毒素比一代更加強力。<br><br><strong>神器（Artifact）的對策：</strong>敵人的神器�      <div class="card"><div class="cb"><div class="row"><div class="ri riacc">S</div><div class="rt"><strong>熊熊烈火（Inflame）</strong>：1費永久+2力量，早期力量的最快累積方式。</div></div><div class="row"><div class="ri riacc">S</div><div class="rt"><strong>魔王形態（Demon Form）</strong>：能力牌，每回合開始+2力量（累積型），是力量流的核心終結手段。</div></div><div class="row"><div class="ri riacc">A</div><div class="rt"><strong>突破極限（Limit Break）</strong>：升級後可反覆使用，將力量翻倍，達到恐怖數值。</div></div><div class="row"><div class="ri riacc">S</div><div class="rt"><strong>旋風斬（Whirlwind）</strong>：X費，對所有敵人多段攻擊，每段都受力量加成，是最佳 AOE 收割武器。</div></div><div class="row"><div class="ri riacc">A</div><div class="rt"><strong>雙重打擊（Twin Strike）</strong>：2費打兩下，力量提升時每顔子彈都倍增，高效多段攻擊。</div></div></div><div class="src">來源：Mobalytics · NeonLightsMedia · games.gg</div></div>��有匕首傷害，「萬刃（A Thousand Cuts）」則讓每張打出的牌都造成1點額外傷害，兩者加乘效果驚人。<br><br><strong>※殺戮尖塔2 重要變更：</strong>「刀扇（Blade Dance）」現在帶有<strong>消耗（Exhaust）</strong>效果，打出後即消耗無法洗回，需特別注意匕首的持久供應來源。</div><div class="src">來源：TheGamer · NeonLightsMedia · egamersworld</div></div>
     <div class="card"><div class="ctit"><span class="bdg bsly">狡詐 Sly</span>殺戮尖塔2 全新機制</div><div class="cb">帶有「狡詐」關鍵字的卡牌在<strong>從手牌被棄置時會自動免費打出</strong>。這讓「棄牌」從代價變成了收益，被英文社群評價為殺戮尖塔2中<strong>最強大的關鍵字</strong>。<br><br>核心運作：用「特技飛行（Acrobatics）」、「精算賭局（Calculated Gamble）」等棄牌手段觸發手中的狡詐卡，實現0費爆發。「反射（Reflex）」棄置時抽2牌、「策士（Tactician）」棄置時+1能量——它們本身費用為3，所以你永遠想棄置而非打出它們。<br><br>新卡「迷霧（Haze）」棄置時施加毒素，「無懈可擊（Untouchable）」棄置時獲得格擋，讓狡詐機制能無縫融入毒素流和防禦型牌組。</div><div class="src">來源：PCGamesN · egamersworld · Mobalytics</div></div>
     <div class="card"><div class="ctit"><span class="bdg bd">防禦機制</span>生存是一切的前提</div><div class="cb">靜默獵手 70HP 且無主動回血，防禦機制至關重要：<br><br><div class="row"><div class="ri riacc">S</div><div class="rt"><strong>暗影盾（Shadowmeld）</strong>：每當打出一張卡牌就獲得等同於敏捷值的格擋，搭配步法（Footwork）後極其強力。</div></div><div class="row"><div class="ri riacc">A</div><div class="rt"><strong>模糊（Blur）</strong>：格擋效果延續到下一回合，讓防守不因敵人不攻擊而浪費。</div></div><div class="row"><div class="ri riacc">A</div><div class="rt"><strong>倖存（Survivor）</strong>：獲得格擋+棄一張牌，攻防兼備且能觸發狡詐效果。</div></div><div class="row"><div class="ri riacc">A</div><div class="rt"><strong>穿雲箭（Piercing Wail）</strong>：大幅降低所有敵人攻擊力，是應對精英怪的頂級防禦技能。</div></div></div><div class="src">來源：TheGamer · PCGamesN · egamersworld</div></div>
     <div class="cal cal-note"><div class="cal-lbl">核心心法</div>靜默獵手的設計哲學：她是少數三條路線都極具競爭力的角色。毒素流最穩定、匕首流最爆發、狡詐棄牌流上限最高。中文社群推薦將毒素與棄牌引擎混合，用抽牌循環驅動輸出，是最靈活的策略。</div>
@@ -946,6 +954,287 @@ function sb(pfx,id,btn){
   document.getElementById(pfx+'-b-'+id).classList.add('active');
   btn.classList.add('active');
 }
+
+      // === 主流流派卡牌圖片注入 ===
+  function applyAll() {
+    function imgUrl(prefix, name) { return 'https://slaythespire.wiki.gg/images/' + prefix + '-' + name.replace(/ /g,'') + '.png'; }
+    function sts2ImgUrl(prefix, name) { return 'https://slaythespire.wiki.gg/images/StS2_' + prefix + '-' + name.replace(/ /g,'') + '.png'; }
+    
+    function makeImg(prefix, engName, zhName, wikiPage, isSts2, fbName) {
+      var url1 = sts2ImgUrl(prefix, engName);
+      var url2 = imgUrl(prefix, engName);
+      var url3 = fbName ? 'https://sts2json.untapped.gg/art/card_portraits/' + fbName + '.png' : '';
+      
+      var a = document.createElement('div'); // 取消超連結，改為純 div
+      a.className = 'ci-wrap';
+      a.title = zhName + ' (' + engName + ')';
+      
+      var img = document.createElement('img');
+      img.alt = zhName;
+      img.loading = 'lazy';
+      img.src = url1; 
+      img.onerror = function() {
+        if (this.src !== url2 && !this.src.includes(url2)) { 
+          this.src = url2; 
+        } else if (url3 && this.src !== url3 && !this.src.includes(url3)) {
+          this.src = url3;
+        } else { 
+          this.closest('.ci-wrap').style.display = 'none'; 
+        }
+      };
+      
+      var lbl = document.createElement('span');
+      lbl.className = 'ci-lbl';
+      lbl.textContent = zhName;
+      
+      a.appendChild(img);
+      a.appendChild(lbl);
+      return a;
+    }
+
+    function addImgsToBuild(buildId, cardList, isSts2) {
+      var container = document.getElementById(buildId);
+      if (!container) return;
+      var added = {};
+
+      var rows = container.querySelectorAll('.row');
+      rows.forEach(function(row) {
+        var txt = row.textContent;
+        cardList.forEach(function(card) {
+          if (txt.indexOf(card.zh) >= 0 && !added[card.zh]) {
+            added[card.zh] = true;
+            var rtDiv = row.querySelector('.rt');
+            if (rtDiv) {
+              var imgContainer = rtDiv.querySelector('.card-imgs');
+              if (!imgContainer) {
+                imgContainer = document.createElement('div');
+                imgContainer.className = 'card-imgs';
+                rtDiv.appendChild(imgContainer);
+              }
+              imgContainer.appendChild(makeImg(card.prefix, card.eng, card.zh, card.wiki || card.eng, isSts2, card.fb));
+            }
+          }
+        });
+      });
+
+      var cbs = container.querySelectorAll('.card > .cb');
+      if (cbs.length > 0) {
+        var firstCb = cbs[0];
+        var txt = firstCb.textContent;
+        var hasNew = false;
+        var cbImgContainer = document.createElement('div');
+        cbImgContainer.className = 'card-imgs';
+        
+        cardList.forEach(function(card) {
+          if (txt.indexOf(card.zh) >= 0 && !added[card.zh]) {
+            added[card.zh] = true;
+            hasNew = true;
+            cbImgContainer.appendChild(makeImg(card.prefix, card.eng, card.zh, card.wiki || card.eng, isSts2, card.fb));
+          }
+        });
+        
+        if (hasNew) {
+          var flow = firstCb.querySelector('.flow');
+          if (flow) {
+            firstCb.insertBefore(cbImgContainer, flow);
+          } else {
+            firstCb.appendChild(cbImgContainer);
+          }
+        }
+      }
+    }
+
+    var RG = 'Regent';
+    var NC = 'Necrobinder';
+    var DF = 'Blue';  
+    var SL = 'Green'; 
+    var IC = 'Red';   
+
+    var rgCards = {
+      radiate: [
+        {zh:'輻射', eng:'Radiate', prefix:RG, fb: 'regent/radiate'},
+        {zh:'封印王座', eng:'SealedThrone', prefix:RG, wiki:'Sealed Throne', fb: 'regent/the_sealed_throne'},
+        {zh:'衝鋒！', eng:'CHARGE!!', prefix:RG, fb:'regent/charge'},
+        {zh:'宇宙冷漠', eng:'CosmicIndifference', prefix:RG, wiki:'Cosmic Indifference', fb:'regent/cosmic_indifference'},
+        {zh:'預言', eng:'Prophesize', prefix:RG, fb:'regent/prophesize'},
+        {zh:'星位序列', eng:'Convergence', prefix:RG, fb:'regent/convergence'}
+      ],
+      engine: [
+        {zh:'隱秘藏品', eng:'HiddenCache', prefix:RG, wiki:'Hidden Cache', fb:'regent/hidden_cache'},
+        {zh:'輝光', eng:'Glow', prefix:RG, fb:'regent/glow'},
+        {zh:'抉擇', eng:'Alignment', prefix:RG, fb:'regent/alignment'},
+        {zh:'勝券在握', eng:'RoyalGamble', prefix:RG, wiki:'Royal Gamble', fb:'regent/royal_gamble'},
+        {zh:'崇拜', eng:'Venerate', prefix:RG, fb:'regent/venerate'}
+      ],
+      forge: [
+        {zh:'鑄牆', eng:'Bulwark', prefix:RG, fb:'regent/bulwark'},
+        {zh:'戰火鑄就', eng:'WroughtinWar', prefix:RG, wiki:'Wrought in War', fb:'regent/wrought_in_war'},
+        {zh:'王者之劍', eng:'SovereignBlade', prefix:RG, wiki:'Sovereign Blade', fb:'regent/sovereign_blade'},
+        {zh:'衝鋒！', eng:'CHARGE!!', prefix:RG, fb:'regent/charge'}
+      ],
+      stardust: [
+        {zh:'星塵', eng:'Stardust', prefix:RG, fb:'regent/stardust'},
+        {zh:'隱秘藏品', eng:'HiddenCache', prefix:RG, wiki:'Hidden Cache', fb:'regent/hidden_cache'},
+        {zh:'星之孩', eng:'ChildoftheStars', prefix:RG, wiki:'Child of the Stars', fb:'regent/child_of_the_stars'},
+        {zh:'黑洞', eng:'BlackHole', prefix:RG, wiki:'Black Hole', fb:'regent/black_hole'}
+      ]
+    };
+    
+    var ncCards = {
+      soul: [
+        {zh:'墓地守衛', eng:'GraveWarden', prefix:NC, wiki:'Grave Warden', fb:'necrobinder/grave_warden'},
+        {zh:'捕獲靈魂', eng:'CaptureSpirit', prefix:NC, wiki:'Capture Spirit', fb:'necrobinder/capture_spirit'},
+        {zh:'輓歌', eng:'Dirge', prefix:NC, fb:'necrobinder/dirge'},
+        {zh:'縈繞', eng:'Haunt', prefix:NC, fb:'necrobinder/haunt'},
+        {zh:'靈魂風暴', eng:'SoulStorm', prefix:NC, wiki:'Soul Storm', fb:'necrobinder/soul_storm'},
+        {zh:'死亡行軍', eng:'DeathMarch', prefix:NC, wiki:'Death March', fb:'necrobinder/death_march'}
+      ],
+      doom: [
+        {zh:'不得逃脫', eng:'NoEscape', prefix:NC, wiki:'No Escape', fb:'necrobinder/no_escape'},
+        {zh:'詛咒', eng:'Scourge', prefix:NC, fb:'necrobinder/scourge'},
+        {zh:'末日穿刺', eng:'DoomSpike', prefix:NC, wiki:'Doom Spike', fb:'necrobinder/doom_spike'},
+        {zh:'死亡之門', eng:'DeathsDoor', prefix:NC, wiki:"Death's Door", fb:'necrobinder/deaths_door'}
+      ],
+      osty: [
+        {zh:'釋放', eng:'Unleash', prefix:NC, fb:'necrobinder/unleash'},
+        {zh:'輓歌', eng:'Dirge', prefix:NC, fb:'necrobinder/dirge'},
+        {zh:'擠壓', eng:'Squeeze', prefix:NC, fb:'necrobinder/squeeze'},
+        {zh:'拍打', eng:'Snap', prefix:NC, fb:'necrobinder/snap'}
+      ],
+      ethereal: [
+        {zh:'鬼哭', eng:'BansheesCry', prefix:NC, wiki:"Banshee's Cry", fb:'necrobinder/banshees_cry'}
+      ]
+    };
+
+    var dfCards = {
+      orb: [
+        {zh:'解構', eng:'Defragment', prefix:DF, fb:'defect/defragment'},
+        {zh:'冰川', eng:'Glacier', prefix:DF, fb:'defect/glacier'},
+        {zh:'冷靜沉著', eng:'Coolheaded', prefix:DF, fb:'defect/coolheaded'},
+        {zh:'電容', eng:'Capacitor', prefix:DF, fb:'defect/capacitor'},
+        {zh:'電擊', eng:'Voltaic', prefix:DF, fb:'defect/voltaic'}
+      ],
+      uproar: [
+        {zh:'怒吼', eng:'Uproar', prefix:DF, fb:'defect/uproar'},
+        {zh:'流星打擊', eng:'Meteor Strike', prefix:DF, fb:'defect/meteor_strike'},
+        {zh:'冰矛', eng:'Ice Spear', prefix:DF, fb:'defect/ice_spear'},
+        {zh:'電擊', eng:'Voltaic', prefix:DF, fb:'defect/voltaic'}
+      ],
+      claw: [
+        {zh:'利爪', eng:'Claw', prefix:DF, fb:'defect/claw'},
+        {zh:'刮除', eng:'Scrape', prefix:DF, fb:'defect/scrape'},
+        {zh:'萬物歸一', eng:'All for One', prefix:DF, fb:'defect/all_for_one'},
+        {zh:'超光速', eng:'FTL', prefix:DF, fb:'defect/ftl'},
+        {zh:'動量打擊', eng:'Momentum Strike', prefix:DF, fb:'defect/momentum_strike'}
+      ],
+      status: [
+        {zh:'煙囪', eng:'Smokestack', prefix:DF, fb:'defect/smokestack'},
+        {zh:'壓縮', eng:'Compact', prefix:DF, fb:'defect/compact'},
+        {zh:'超頻', eng:'Overclock', prefix:DF, fb:'defect/overclock'},
+        {zh:'迭代', eng:'Iterate', prefix:DF, fb:'defect/iterate'},
+        {zh:'高射砲', eng:'Flak Cannon', prefix:DF, fb:'defect/flak_cannon'}
+      ]
+    };
+
+    var slCards = {
+      sly: [
+        {zh:'職業工具', eng:'Tools of the Trade', prefix:SL, fb:'silent/tools_of_the_trade'},
+        {zh:'精算賭局', eng:'Calculated Gamble', prefix:SL, fb:'silent/calculated_gamble'},
+        {zh:'特技飛行', eng:'Acrobatics', prefix:SL, fb:'silent/acrobatics'},
+        {zh:'大師計畫', eng:'Master Planner', prefix:SL, fb:'silent/master_planner'},
+        {zh:'反射', eng:'Reflex', prefix:SL, fb:'silent/reflex'},
+        {zh:'策士', eng:'Tactician', prefix:SL, fb:'silent/tactician'}
+      ],
+      shiv: [
+        {zh:'揭露', eng:'Expose', prefix:SL, fb:'silent/expose'},
+        {zh:'刀扇', eng:'Blade Dance', prefix:SL, fb:'silent/blade_dance'},
+        {zh:'精準', eng:'Accuracy', prefix:SL, fb:'silent/accuracy'},
+        {zh:'無盡之刃', eng:'Infinite Blades', prefix:SL, fb:'silent/infinite_blades'},
+        {zh:'殘像', eng:'Afterimage', prefix:SL, fb:'silent/afterimage'},
+        {zh:'萬刃', eng:'A Thousand Cuts', prefix:SL, fb:'silent/a_thousand_cuts'},
+        {zh:'匕首陷阱', eng:'Knife Trap', prefix:SL, fb:'silent/knife_trap'},
+        {zh:'刀劍風暴', eng:'Fan of Knives', prefix:SL, fb:'silent/fan_of_knives'}
+      ],
+      poison: [
+        {zh:'劇毒煙霧', eng:'Noxious Fumes', prefix:SL, fb:'silent/noxious_fumes'},
+        {zh:'催化劑', eng:'Catalyst', prefix:SL, fb:'silent/catalyst'},
+        {zh:'爆裂', eng:'Burst', prefix:SL, fb:'silent/burst'},
+        {zh:'毒刺', eng:'Poisoned Stab', prefix:SL, fb:'silent/poisoned_stab'},
+        {zh:'腐蝕波動', eng:'Corrosive Wave', prefix:SL, fb:'silent/corrosive_wave'},
+        {zh:'加速劑', eng:'Accelerant', prefix:SL, fb:'silent/accelerant'},
+        {zh:'致命毒藥', eng:'Deadly Poison', prefix:SL, fb:'silent/deadly_poison'},
+        {zh:'泡泡', eng:'Bubble Bubble', prefix:SL, fb:'silent/bubble_bubble'},
+        {zh:'屍爆', eng:'Corpse Explosion', prefix:SL, fb:'silent/corpse_explosion'}
+      ],
+      hybrid: [
+        {zh:'職業工具', eng:'Tools of the Trade', prefix:SL, fb:'silent/tools_of_the_trade'},
+        {zh:'迷霧', eng:'Haze', prefix:SL, fb:'silent/haze'},
+        {zh:'毒化', eng:'Envenom', prefix:SL, fb:'silent/envenom'},
+        {zh:'催化劑', eng:'Catalyst', prefix:SL, fb:'silent/catalyst'},
+        {zh:'蛇咬', eng:'Snakebite', prefix:SL, fb:'silent/snakebite'}
+      ]
+    };
+
+    var icCards = {
+      strength: [
+        {zh:'熊熊烈火', eng:'Inflame', prefix:IC, fb:'ironclad/inflame'},
+        {zh:'魔王形態', eng:'Demon Form', prefix:IC, fb:'ironclad/demon_form'},
+        {zh:'突破極限', eng:'Limit Break', prefix:IC, fb:'ironclad/limit_break'},
+        {zh:'旋風斬', eng:'Whirlwind', prefix:IC, fb:'ironclad/whirlwind'},
+        {zh:'雙重打擊', eng:'Twin Strike', prefix:IC, fb:'ironclad/twin_strike'}
+      ],
+      exhaust: [
+        {zh:'異端腐蝕', eng:'Corruption', prefix:IC, fb:'ironclad/corruption'},
+        {zh:'痛不欲生', eng:'Feel No Pain', prefix:IC, fb:'ironclad/feel_no_pain'},
+        {zh:'黑暗擁抱', eng:'Dark Embrace', prefix:IC, fb:'ironclad/dark_embrace'},
+        {zh:'真正的勇氣', eng:'True Grit', prefix:IC, fb:'ironclad/true_grit'},
+        {zh:'燃燒契約', eng:'Burning Pact', prefix:IC, fb:'ironclad/burning_pact'}
+      ],
+      bodyslam: [
+        {zh:'壁壘', eng:'Barricade', prefix:IC, fb:'ironclad/barricade'},
+        {zh:'肉身猛擊', eng:'Body Slam', prefix:IC, fb:'ironclad/body_slam'},
+        {zh:'榨汁', eng:'Juggernaut', prefix:IC, fb:'ironclad/juggernaut'},
+        {zh:'閉嘴忍著', eng:'Shrug It Off', prefix:IC, fb:'ironclad/shrug_it_off'},
+        {zh:'火焰護盾', eng:'Flame Barrier', prefix:IC, fb:'ironclad/flame_barrier'}
+      ],
+      fiendfire: [
+        {zh:'燃燒契約', eng:'Burning Pact', prefix:IC, fb:'ironclad/burning_pact'},
+        {zh:'黑暗擁抱', eng:'Dark Embrace', prefix:IC, fb:'ironclad/dark_embrace'},
+        {zh:'地獄烈火', eng:'Fiend Fire', prefix:IC, fb:'ironclad/fiend_fire'}
+      ]
+    };
+
+    addImgsToBuild('rg-b-radiate', rgCards.radiate, true);
+    addImgsToBuild('rg-b-engine', rgCards.engine, true);
+    addImgsToBuild('rg-b-forge', rgCards.forge, true);
+    addImgsToBuild('rg-b-stardust', rgCards.stardust, true);
+
+    addImgsToBuild('nc-b-soul', ncCards.soul, true);
+    addImgsToBuild('nc-b-doom', ncCards.doom, true);
+    addImgsToBuild('nc-b-osty', ncCards.osty, true);
+    addImgsToBuild('nc-b-ethereal', ncCards.ethereal, true);
+
+    addImgsToBuild('df-b-orb', dfCards.orb, false);
+    addImgsToBuild('df-b-uproar', dfCards.uproar, false);
+    addImgsToBuild('df-b-claw', dfCards.claw, false);
+    addImgsToBuild('df-b-status', dfCards.status, false);
+
+    addImgsToBuild('sl-b-sly', slCards.sly, false);
+    addImgsToBuild('sl-b-shiv', slCards.shiv, false);
+    addImgsToBuild('sl-b-poison', slCards.poison, false);
+    addImgsToBuild('sl-b-hybrid', slCards.hybrid, false);
+
+    addImgsToBuild('ic-b-strength', icCards.strength, false);
+    addImgsToBuild('ic-b-exhaust', icCards.exhaust, false);
+    addImgsToBuild('ic-b-bodyslam', icCards.bodyslam, false);
+    addImgsToBuild('ic-b-fiendfire', icCards.fiendfire, false);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', applyAll);
+  } else {
+    applyAll();
+  }
 </script>
 </body>
 </html>
